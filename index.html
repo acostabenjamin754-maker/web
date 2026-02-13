@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Shirlina ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="heart-container"></div>
+    <div id="sparkles-container"></div>
+    <div id="signature-ink" class="signature-ink"></div>
+
+    <button id="music-toggle" class="music-btn">🔊 Música</button>
+    <div id="music-hint" class="music-hint">
+        <span class="arrow">⬆️</span>
+        <p>Toca aqui antes de decir Ti 🙈</p>
+    </div>
+    <audio id="bg-music" loop>
+        <source src="assets/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="necklace-container">
+        <div class="chain left"></div>
+        <div class="chain right"></div>
+        <div class="heart-split">
+            <div class="heart-half left">
+                <span class="letter">S</span>
+            </div>
+            <div class="heart-half right">
+                <span class="letter">B</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Snoopy con Rosas -->
+    <div class="snoopy-container">
+        <img src="assets/snoopy_roses.png" alt="Snoopy con Rosas" class="snoopy-img">
+    </div>
+
+    <!-- Spider-Man y Hello Kitty -->
+    <div class="spiderman-container">
+        <img src="assets/spiderman_hello.png" alt="Spider-Man y Hello Kitty" class="spiderman-img">
+    </div>
+
+    <main id="app">
+        <!-- PÁGINA 1: INICIO -->
+        <section id="page-1" class="page active reveal">
+            <div class="content-wrapper glass animate-pop">
+                <div id="countdown-container" class="countdown-box">
+                    <p class="countdown-label">FALTAN PARA SAN VALENTÍN:</p>
+                    <div id="timer" class="timer-display">
+                        <span id="days">00</span>d <span id="hours">00</span>h <span id="minutes">00</span>m <span
+                            id="seconds">00</span>s
+                    </div>
+                </div>
+                <img src="assets/1.jpg" alt="Shirlina" class="profile-img">
+                <h1 class="title fade-in">¿QUIERES SER MI SAN VALENTÍN? 🥺😍<span class="beating-heart">💖</span></h1>
+                <div class="button-group">
+                    <button id="btn-yes" class="btn btn-primary animate-pop">TIII MI BENNI 🥰🥺</button>
+                    <button id="btn-no" class="btn btn-secondary animate-shake">Juuum NO 🙄😠</button>
+                </div>
+                <p id="error-msg" class="error-text hidden"></p>
+            </div>
+        </section>
+
+        <!-- PÁGINA 2: MENSAJE EMOCIONAL -->
+        <section id="page-2" class="page reveal">
+            <div class="content-wrapper glass">
+                <img src="assets/2.jpg" alt="Momentos" class="story-img">
+                <div class="story-text">
+                    <h2 class="title fade-in delay-1">Nuestra Historia</h2>
+                    <p class="fade-in delay-2">¡Feliz San Valentín, <strong>MI TITITAAAAA!</strong> 💖✨</p>
+                    <p class="fade-in delay-3">No podía dejar pasar este día sin decirte lo importante que eres y cómo
+                        me haces sentir desde que
+                        estamos juntos.🫂🥺❤️</p>
+                    <p class="fade-in delay-4">Me encanta cómo somos, nuestras risas, nuestras enojadas que me gusta su
+                        carita de enojada, y
+                        cada momento que compartimos.😠😍</p>
+                    <p class="fade-in delay-5">Eres mi persona favorita en todo el mundo🥺😍 , la que me tiene así de
+                        loquitop y la que me saca
+                        la
+                        sonrisa más grande con solo un mensaje… 🤪❤️</p>
+                    <p class="fade-in delay-6">Eres la más hermocha. 💖🌟</p>
+                </div>
+                <button class="btn btn-next" onclick="nextPage(3)">Siguiente 💕</button>
+            </div>
+        </section>
+
+        <!-- PÁGINA 3: CORAZÓN -->
+        <section id="page-3" class="page reveal">
+            <div class="content-wrapper glass">
+                <img src="assets/3.jpg" alt="Nosotros" class="story-img">
+                <div class="story-text">
+                    <h2 class="title fade-in delay-1">Mi Corazón</h2>
+                    <p class="fade-in delay-2">Sé que ‘oficialmente’ no somos, pero si te soy sincero, mi corazón ya te
+                        eligió hace mucho y para
+                        mí esto ya es más que oficial. 🥺❤️</p>
+                    <p class="fade-in delay-3">No necesito ser algo oficial para sentir que eres mi lugar seguro y que
+                        lo que tenemos es lo más
+                        real y bonito que he vivido. 🥰✨</p>
+                    <p class="fade-in delay-4">Benni es tuyo y tú eres mía, Jummm.🙄😠</p>
+                    <p class="fade-in delay-5">Siempre agradezco a Dios por haberte puesto a mi lado. ❤️🧸</p>
+                </div>
+                <button class="btn btn-next" onclick="nextPage(4)">Siguiente 💖</button>
+            </div>
+        </section>
+
+        <!-- PÁGINA 4: ENOJONA -->
+        <section id="page-4" class="page reveal">
+            <div class="content-wrapper glass">
+                <img src="assets/4.jpg" alt="Enojona Favorita" class="story-img">
+                <div class="story-text">
+                    <h2 class="title fade-in delay-1">Tú</h2>
+                    <p class="fade-in delay-2"><strong>MI BOMBONCHITO❤️😍</strong>, aunque a veces saques tu carácter
+                        fuerte, tengo que
+                        confesarte que eres
+                        mi enojona Prechiochichima.😤❤️</p>
+                    <p class="fade-in delay-3">Me encanta cuando te pones así porque hasta haciendo berrinche te ves
+                        hermochichima.🥺❤️</p>
+                    <p class="fade-in delay-4">Quiero seguir consintiendo a <strong>MI POLLITA</strong> 🐥❤️ consentida
+                        y llenando de besos a
+                        <strong>MI CACHETONA😍</strong> hermosa todos los días del año, aunque me hagas caras.🤪😘
+                    </p>
+                    <p class="fade-in delay-5">No hay nada que me guste más que calmar tus enojos con muchos betitos y
+                        caricias que le gustan a
+                        ella. 💖🐥✨</p>
+                </div>
+                <button class="btn btn-next" onclick="nextPage(5)">Siguiente 💘</button>
+            </div>
+        </section>
+
+        <!-- PÁGINA FINAL -->
+        <section id="page-5" class="page reveal">
+            <div class="content-wrapper glass">
+                <img src="assets/5.jpg" alt="Para Siempre" class="story-img">
+                <div class="story-text final-text">
+                    <h2 class="title fade-in delay-1">Para Nosotros</h2>
+                    <p class="fade-in delay-2">apenas es nuestro primer San Valentín, pero te prometo que quiero
+                        que sea el primero de
+                        muchísimos más. 🥺❤️🗓️</p>
+                    <p class="fade-in delay-3">¡LA AMUUU MUCHOOO MI ENOJONCITA HERMOSA!🐥❤️✨</p>
+                    <p class="fade-in delay-4">Gracias por aparecer en mi vida, por aguantar todo de Bennicito y por ser
+                        exactamente como eres. 🥺❤️
+                    </p>
+                    <p class="fade-in delay-5"><strong>Shirlina hermocha</strong> 🥰❤️, prepárese porque no pienso
+                        soltarla nunca. 💘✨</p>
+                    <p class="fade-in delay-6">Eres todo lo que quiero en esta vida. 🐥❤️👑</p>
+                </div>
+                <div class="signature">
+                    <p>ATT: BENNI BU 🐥❤️</p>
+                    <p>PARA: SHIRLINA LA MÁS HERMOCHA 🧸👑🐥❤️</p>
+                </div>
+                <button class="btn btn-close" onclick="closeApp()">Cerrar ❤️</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
